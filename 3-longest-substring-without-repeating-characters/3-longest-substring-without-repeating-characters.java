@@ -28,12 +28,10 @@ class Solution
         int max = 0;
         
         while(right < s.length())
-        {
-            char ch = s.charAt(right);
-            
-            if(!mySet.contains(ch))
+        {            
+            if(!mySet.contains(s.charAt(right)))
             {
-                mySet.add(ch);
+                mySet.add(s.charAt(right));
                 right++;
                 max = Math.max(max, mySet.size());
             }
