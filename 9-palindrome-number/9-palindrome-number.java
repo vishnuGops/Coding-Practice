@@ -2,13 +2,12 @@ class Solution {
     public boolean isPalindrome(int x) {
         if(x < 0)
             return false;
-        long reversed = 0;
+        long r = 0;
         int y = x;
         while(y>0){
-            reversed = reversed * 10 + y %10;
-            y=y/10;
+            r = r *10 + y % 10;
+            y = y /10;
         }
-        return reversed == x;
+        return r == x;
     }
-    
 }
