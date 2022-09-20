@@ -13,10 +13,6 @@ class Solution {
                 j++;
             }
         }
-        
-        
-        
         return (max>0?max:0);
-        
     }
 }
