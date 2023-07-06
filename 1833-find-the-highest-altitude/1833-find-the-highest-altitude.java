@@ -3,14 +3,10 @@ class Solution {
         int top = Integer.MIN_VALUE;
         int sum = 0;
         for(int i =0; i< gain.length; i++){
-            if(sum > top){
-                top = sum;
-            }
+            top = Math.max(sum , top);
             sum = sum + gain[i];
         }
-        if(sum > top){
-        top = sum;
-        }
-        return top;
+        return Math.max(top, sum);
+        
     }
 }
