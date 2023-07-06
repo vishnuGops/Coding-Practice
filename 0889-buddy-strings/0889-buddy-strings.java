@@ -3,21 +3,19 @@ class Solution {
         char a='a',b='a';
         int count=0;
         int [] chars=new int [26];
-        char [] schar=s.toCharArray();
-        char [] goalchar=goal.toCharArray();
         if(s.length()!=goal.length()) return false;
-        for(int i=0;i<schar.length;i++)
+        for(int i=0;i<s.length();i++)
         {
-            chars[schar[i]-'a']++;
-            if(schar[i]!=goalchar[i])
+            chars[s.charAt(i)-'a']++;
+            if(s.charAt(i)!=goal.charAt(i))
             {
                 if(count==0)
                 {
-                    a=schar[i];
-                    b=goalchar[i];
+                    a=s.charAt(i);
+                    b=goal.charAt(i);
                     count++;
                 }
-                else if(a==goalchar[i] && b==schar[i])
+                else if(a==goal.charAt(i) && b==s.charAt(i))
                     count++;
 
                 //if more than 1 swap occurs then return false
