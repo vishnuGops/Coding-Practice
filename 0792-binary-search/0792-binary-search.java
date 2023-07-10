@@ -5,7 +5,7 @@ class Solution {
         int last = len -1;
 
         while(first <= last){
-            int mid = first + (last - first) / 2;
+            int mid = last - first / 2;
             if(nums[mid] == target){
                 return mid;
             }
